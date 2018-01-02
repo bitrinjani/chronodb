@@ -1,0 +1,44 @@
+{
+  "name": "@bitr/chronodb",
+  "version": "1.0.2",
+  "description": "ChronoDB is a time-series local DB for Node.js powered by Google's LevelDB.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --coverage --runInBand && cat ./coverage/lcov.info | coveralls",
+    "jest": "jest --runInBand",
+    "cov": "jest --coverage --runInBand"
+  },
+  "keywords": ["time-series", "leveldb", "levelup", "typescript"],
+  "repository": "https://github.com/bitrinjani/chronodb",
+  "author": "bitrinjani <bitrinjani@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "level": "^2.1.1",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
+    "through2": "^2.0.3",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^21.1.4",
+    "@types/lodash": "^4.14.91",
+    "@types/node": "^8.0.46",
+    "@types/through2": "^2.0.33",
+    "@types/uuid": "^3.4.3",
+    "coveralls": "^3.0.0",
+    "jest": "^21.0.3",
+    "ts-jest": "^21.0.0",
+    "typescript": "^2.5.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "/__tests__/.*\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
+    "mapCoverage": true,
+    "collectCoverageFrom": ["**/*.{ts,tsx}", "!**/__tests__/**", "!**/node_modules/**", "!**/*.d.ts", "!**/types.ts"]
+  }
+}
