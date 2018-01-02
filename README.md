@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/bitrinjani/chronodb.svg?branch=master)](https://travis-ci.org/bitrinjani/chronodb) [![Coverage Status](https://coveralls.io/repos/github/bitrinjani/chronodb/badge.svg?branch=master&i=2)](https://coveralls.io/github/bitrinjani/chronodb?branch=master) [![npm version](https://badge.fury.io/js/%40bitr%2Fchronodb.svg)](https://badge.fury.io/js/%40bitr%2Fchronodb)
+
 # ChronoDB
 ChronoDB is a time-series local DB for Node.js powered by Google's LevelDB.
 
@@ -19,5 +21,9 @@ npm install @bitr/chronodb
 ## Example
 ...
 
+## Real-world example
+[R2 Bitcoin Arbitrager](https://github.com/bitrinjani/r2) utilizes the library to persist data.
+
 # Interface
 ...
+
